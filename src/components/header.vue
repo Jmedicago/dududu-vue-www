@@ -109,7 +109,7 @@
     margin: 0px;
     background-color: #DA2625;
     border: none;
-    margin-top: 35px;
+    /*margin-top: 35px;*/
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
   }
 
@@ -131,10 +131,6 @@
       max-height: 76px;
       max-width: 346px;
       margin-top: 35px;
-    }
-
-    .flash {
-      margin-top: 95px;
     }
 
     .navbar {
