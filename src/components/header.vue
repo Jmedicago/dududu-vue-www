@@ -19,10 +19,11 @@
           <ul class="nav navbar-nav navbar-nav-c">
             <li :class="{dropdown : nav.child != null}" v-for="nav in navList">
               <a :href="nav.url">{{nav.name}}</a>
-              <a :href="nav.url" v-if="nav.child != null" id="app_menudown" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              <a :href="nav.url" v-if="nav.child != null" id="app_menudown" class="dropdown-toggle"
+                 data-toggle="dropdown" role="button" aria-expanded="false">
                 <span class="glyphicon glyphicon-menu-down btn-xs"></span>
               </a>
-              <ul v-if="nav.child != null" class='dropdown-menu nav_small' role='menu'>
+              <ul v-if="nav.child != null" class="dropdown-menu nav_small" role="menu">
                 <li v-for="item in nav.child">
                   <a :href="item.url">{{item.name}}</a>
                 </li>
@@ -36,66 +37,66 @@
 </template>
 
 <script>
-  import 'bootstrap/dist/css/bootstrap.min.css'
-  import 'bootstrap/dist/js/bootstrap.min.js'
+  import "bootstrap/dist/css/bootstrap.min.css";
+  import "bootstrap/dist/js/bootstrap.min.js";
 
   export default {
     data() {
       return {
         navList: [{
-          name: '首 页',
-          url: '/index'
+          name: "首 页",
+          url: "/index"
         }, {
-          name: '关于我们',
-          url: '/about'
+          name: "关于我们",
+          url: "/about"
         }, {
-          name: '产品展示',
-          url: '/product',
+          name: "产品展示",
+          url: "/product",
           child: [{
-            name: '产品分类一',
-            url: '115.html',
+            name: "产品分类一",
+            url: "115.html",
           }, {
-            name: '产品分类二',
-            url: '74.html',
+            name: "产品分类二",
+            url: "74.html",
           }, {
-            name: '产品分类三',
-            url: '124.html',
+            name: "产品分类三",
+            url: "124.html",
           }]
         }, {
-          name: '新闻资讯',
-          url: '/news',
+          name: "新闻资讯",
+          url: "/news",
           child: [{
-            name: '公司新闻',
-            url: '86.html',
+            name: "公司新闻",
+            url: "86.html",
           }, {
-            name: '行业新闻',
-            url: '99.html',
+            name: "行业新闻",
+            url: "99.html",
           }, {
-            name: '科技新闻',
-            url: '106.html',
+            name: "科技新闻",
+            url: "106.html",
           }]
         }, {
-          name: '下载中心',
-          url: '/down'
+          name: "下载中心",
+          url: "/down"
         }, {
-          name: '企业相册',
-          url: '/photo'
+          name: "企业相册",
+          url: "/photo"
         }, {
-          name: '留言反馈',
-          url: '/feedback'
+          name: "留言反馈",
+          url: "/feedback"
         }, {
-          name: '联系我们',
-          url: '/contact'
+          name: "联系我们",
+          url: "/contact"
         }]
       }
     },
     mounted() {
       if ($(window).width() > 768) {
         //鼠标划过就展开子菜单
-        $('ul.nav li.dropdown').hover(function () {
-          $(this).find('.dropdown-menu').stop(true, true).slideDown();
+        $("ul.nav li.dropdown").hover(function () {
+          $(this).find(".dropdown-menu").stop(true, true).slideDown();
         }, function () {
-          $(this).find('.dropdown-menu').stop(true, true).slideUp();
+          $(this).find(".dropdown-menu").stop(true, true).slideUp();
         });
       }
     }

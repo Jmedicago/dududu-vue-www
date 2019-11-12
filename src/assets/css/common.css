@@ -1,3 +1,7 @@
 body {
   background: gray;
 }
+
+ul {
+  list-style: none;
+}

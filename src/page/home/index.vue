@@ -1,25 +1,52 @@
 <template>
   <div>
     <Header></Header>
-    <div class="btn-group" role="group" aria-label="...">
-      <button type="button" class="btn btn-default">Left</button>
-      <button type="button" class="btn btn-default">Middle</button>
-      <button type="button" class="btn btn-default">Right</button>
+    <!-- slider -->
+    <div class="flash">
+      <ul class="bxslider">
+        <li>
+          <a href="http://">
+            <img src="../../assets/1556441135.jpg" alt="广告标题"/>
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
 
 <script>
-  import 'bootstrap/dist/css/bootstrap.min.css'
-  import 'bootstrap/dist/js/bootstrap.min.js'
+  import "bootstrap/dist/css/bootstrap.min.css";
+  import "bootstrap/dist/js/bootstrap.min.js";
   import Header from "../../components/header";
 
+
   export default {
-    name: "index",
     components: {Header}
   }
 </script>
 
 <style scoped>
+  .flash img {
+    width: 100%
+  }
 
+  .flash ul.bxslider {
+    list-style: none;
+  }
+
+  .flash div.bx-pager {
+    bottom: 4%;
+  }
+
+  .flash div.bx-controls-direction {
+    display: none;
+  }
+
+  .img-thumbnail {
+    border: none;
+  }
+
+  .img-thumbnail:hover, .opacity_img:hover {
+    opacity: 0.8;
+  }
 </style>
