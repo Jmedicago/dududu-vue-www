@@ -12,7 +12,7 @@
             <span class="icon-bar"></span>
           </button>
           <a href="#">
-            <img src="../assets/logo.jpg" class="logo" alt="企业通用模版网站"/>
+            <img src="../assets/logo.png" class="logo" alt="黄冈市嘟嘟嘟网络科技有限公司"/>
           </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
@@ -41,9 +41,10 @@
   import "bootstrap/dist/js/bootstrap.min.js";
 
   export default {
+    name: "Header",
     data() {
       return {
-        navList: [{
+        navList: [/*{
           name: "首 页",
           url: "/index"
         }, {
@@ -87,18 +88,30 @@
         }, {
           name: "联系我们",
           url: "/contact"
-        }]
+        }*/]
       }
     },
     mounted() {
       if ($(window).width() > 768) {
-        //鼠标划过就展开子菜单
+        // 鼠标划过就展开子菜单
         $("ul.nav li.dropdown").hover(function () {
           $(this).find(".dropdown-menu").stop(true, true).slideDown();
         }, function () {
           $(this).find(".dropdown-menu").stop(true, true).slideUp();
         });
       }
+
+      // scrollTop
+      $(window).scroll(function () {
+        let scrolls = $(window).scrollTop()
+        if (scrolls > 10) {
+          $(".navbar").addClass("small-nav");
+          $(".flash").addClass("toflash");
+        } else {
+          $(".navbar").removeClass("small-nav");
+          $(".flash").removeClass("toflash");
+        }
+      });
     }
   }
 </script>
