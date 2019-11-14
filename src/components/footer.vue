@@ -2,7 +2,7 @@
   <footer>
     <div class="copyright">
       <p>
-        CopyRight 2019 All Right Reserved Vue {{name}}&nbsp;ICP:{{icp}}
+        CopyRight 2019 All Right Reserved Vue {{name}}<br>网站ICP:{{icp}}
         <a href="#" target="_blank">网站地图</a>
       </p>
       <p class="copyright_p">
@@ -73,13 +73,23 @@
     padding: 3px 0px 0px 0px;
   }
 
-  .webshare {
-    width: 230px;
-    padding: 5px;
+  /*小屏幕*/
+  @media screen and (max-width: 768px) {
+    .footer_nav {
+      background-color: #fafafa;
+    }
+
+    footer {
+      margin-bottom: 50px;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
   }
 
-  .ewebshare {
-    width: 200px;
-    padding: 5px;
+  @media screen and (max-width: 767px) {
+    .copyright_p {
+      display: none;
+    }
   }
+
 </style>
