@@ -320,4 +320,11 @@
       margin-top: 95px;
     }
   }
+
+  /*小屏幕*/
+  @media screen and (max-width: 768px) {
+    .flash {
+      margin-top: 50px;
+    }
+  }
 </style>
